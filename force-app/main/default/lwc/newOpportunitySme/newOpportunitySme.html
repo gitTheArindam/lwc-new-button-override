@@ -1,0 +1,52 @@
+<template>
+    <lightning-card>
+        <div class="slds-var-m-around_medium">
+            <lightning-layout multiple-rows>
+                <lightning-layout-item size="6" padding="around-small">
+                    <!-- Opportunity -->
+                    <lightning-record-picker
+                        label="Opportunity"
+                        placeholder="Serch Opportunities..."
+                        object-api-name="Opportunity"
+                        value={recordId}
+                        onchange={handleOpportunityChange}
+                        required
+                    ></lightning-record-picker>
+                </lightning-layout-item>
+                <lightning-layout-item size="6" padding="around-small">
+                    <!-- Department -->
+                    <lightning-combobox
+                        name="Department"
+                        label="Department"
+                        value={selectedDepartment}
+                        placeholder="--None--"
+                        options={departmentOptions}
+                        onchange={handleDepartmentChange}
+                        required
+                    ></lightning-combobox>
+                </lightning-layout-item>
+                <lightning-layout-item size="6" padding="around-small">
+                    <!-- Effective Date -->
+                    <lightning-input
+                        type="date"
+                        name="effectiveDate"
+                        label="Effective Date"
+                        value={effectiveDate}
+                        onchange={handleEffectiveDateChange}
+                        required
+                    ></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="6" padding="around-small">
+                    <!-- Expiration Date -->
+                    <lightning-input
+                        type="date"
+                        name="expirationDate"
+                        label="Expiration Date"
+                        value={expirationDate}
+                        onchange={handleExpirationDateChange}
+                    ></lightning-input>
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,25 @@
+<template>
+    <lightning-modal-header label={label}></lightning-modal-header>
+    <lightning-modal-body>
+        <c-new-opportunity-sme record-id={recordId}></c-new-opportunity-sme>
+    </lightning-modal-body>
+    <lightning-modal-footer>
+        <div class="slds-align_absolute-center">
+            <lightning-button
+                label="Cancel"
+                onclick={handleCancel}
+            ></lightning-button>
+            <lightning-button
+                class="slds-var-p-left_small"
+                label="Save &amp; New"
+                onclick={handleSaveAndNew}
+            ></lightning-button>
+            <lightning-button
+                class="slds-var-p-left_small"
+                label="Save"
+                variant="brand"
+                onclick={handleSave}
+            ></lightning-button>
+        </div>
+    </lightning-modal-footer>
+</template>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>NEW_OPPORTUNITY_SME</fullName>
+        <categories>Heading</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>NEW_OPPORTUNITY_SME</shortDescription>
+        <value>New Opportunity SME</value>
+    </labels>
+    <labels>
+        <fullName>OPPORTUNITY_SME_FAILURE_MESSAGE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>OPPORTUNITY_SME_FAILURE_MESSAGE</shortDescription>
+        <value>Error Creating Opportunity SME Record!</value>
+    </labels>
+    <labels>
+        <fullName>OPPORTUNITY_SME_SUCCESS_MESSAGE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>OPPORTUNITY_SME_SUCCESS_MESSAGE</shortDescription>
+        <value>Opportunity SME Record Created Successfully!</value>
+    </labels>
+</CustomLabels>
