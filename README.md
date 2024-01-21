@@ -1,18 +1,19 @@
-# Salesforce DX Project: Next Steps
+# A Hackers’ guide to override “New” button functionality with LWC modal
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+Recently in one of my projects I had a requirement to override the standard New button functionality with custom LWC component to accommodate some business logic.
 
-## How Do You Plan to Deploy Your Changes?
+After searching for the solution online, I came to know that:
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+1. It is currently not possible to use LWC directly to override the Standard New button. Instead, we have to use an Aura component as a wrapper, and then call the LWC from within the Aura component.
 
-## Configure Your Salesforce DX Project
+1. Even if we use this approach, the custom component will open in a new tab instead of a modal, which — albeit working perfectly fine — does not result in a good user experience. As shown below:
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+![Figure 1: Result after overriding Standard New button with LWC wrapped inside Aura](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*rdlll610Hba4uUuo4jzdTw.png)
+_Figure 1: Result after overriding Standard New button with LWC wrapped inside Aura_
 
-## Read All About It
+So, I started doing some throwaway prototyping and eventually came up with the solution that I have shared below.
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+![Figure 2: My custom solution with LWC Modal](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*ud-6MZ82uSKFDu-G1T8WVw.png)
+_Figure 2: My custom solution with LWC Modal_
+
+I'm sharing a link to the detailed article [here](https://medium.com/@arindam-karmakar/a-hackers-guide-to-override-new-button-functionality-with-lwc-modal-a39d35c73bc4). Please have a look at this and let me know if you have found any other workaround for this issue.
